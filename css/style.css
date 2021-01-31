@@ -22,26 +22,27 @@
 /*variables*/
 
 :root {
-  --title-text: #000000;
-  --main-white: #ffffff;
-  --main-content-text: #283136;
-  --footer-content-text: #444444;
-  --popup-content-text: #666666;
-  --icon-grey: #a6a6a6;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --main-contant: #283136;
+  --footer-content: #444444;
+  --popup-content: #666666;
   --selection-grey: #4d4d4d;
-  --input-grey: #eeeeee;
-  --link-text-hover: #fb565a;
-  --button-red-rest: #fb565a;
-  --button-red-hover: #e74246;
-  --button-red-active: #d7373b;
-  --button-green-rest: #00ca74;
-  --button-green-hover: #00bc6c;
-  --button-green-active: #00aa62;
-  --button-yellow-rest: #efc849;
-  --button-yellow-hover: #eab534;
-  --button-yellow-active: #e5a722;
+  --basic-grey: #eeeeee;
+  --basic-red: #fb565a;
+  --hover-red: #e74246;
+  --active-red: #d7373b;
+  --basic-green: #00ca74;
+  --hover-green: #00bc6c;
+  --active-green: #00aa62;
+  --basic-yellow: #efc849;
+  --hover-yellow: #eab534;
+  --active-yellow: #e5a722;
   --icon-social-rest: #e1e1e1;
+  --icon-grey: #a6a6a6;
   --stroke-grey: #d7dcde;
+  --hover-grey: #dfdfdf;
+  --active-grey: #d5d5d5;
 }
 
 /*global*/
@@ -51,9 +52,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--main-content-text);
-  background-color: var(--basic-grey);
-  background-image: url("../img/bg.jpg")
+  color: var(--main-contant);
 }
 
 .invisible {
@@ -61,21 +60,22 @@
 }
 
 .button {
-  background: var(--button-red-rest);
+  background: var(--basic-red);
   border-radius: 3px;
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--basic-white);
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: var(--button-red-hover);
+  background-color: var(--hover-red);
 }
 
 .button:active {
-  background-color: var(--button-red-active);
+  background-color: var(--active-red);
+  color:rgba(0, 0, 0, 0.3);
 }
 
 /*main navigation*/
@@ -84,7 +84,7 @@
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
-  color: var(--title-text);
+  color: var(--basic-black);
   background-color: transparent;
 }
 
@@ -93,28 +93,33 @@
 }
 
 .site-navigation a, .user-navigation a {
-  color: var(--title-text);
+  color: var(--basic-black);
   text-decoration: none;
   font-weight: 500;
 }
 
 .site-navigation a:hover, .user-navigation a:hover {
-  color: var(--link-text-hover);
+  color: var(--basic-red);
 }
 
 .site-navigation a:active, .user-navigation a:active {
-  color: var(--title-text);
+  color: var(--basic-black);
   opacity: 0.3;
 }
 
 /*feature*/
+
+.feature-container {
+background-color: var(--basic-grey);
+border: 7px solid var(--basic-grey);
+}
 
 .slider-list {
   list-style: none;
 }
 
 .feature-motto {
-  color: var(--title-text);
+  color: var(--basic-black);
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -135,31 +140,33 @@
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 .button.green-button {
-  background-color: var(--button-green-rest);
+  background-color: var(--basic-green);
 }
 
 .button.green-button:hover {
-  background-color: var(--button-green-hover);
+  background-color: var(--hover-green);
 }
 
 .button.green-button:active {
-  background-color: var(--button-green-active);
+  background-color: var(--active-green);
+  color:rgba(0, 0, 0, 0.3)
 }
 
 .button.yellow-button {
-  background-color: var(--button-yellow-rest);
+  background-color: var(--basic-yellow);
 }
 
 .button.yellow-button:hover {
-  background-color: var(--button-yellow-hover);
+  background-color: var(--hover-yellow);
 }
 
 .button.yellow-button:active {
-  background-color: var(--button-yellow-active);
+  background-color: var(--active-yellow);
+  color:rgba(0, 0, 0, 0.3)
 }
 
 /*about-us*/
@@ -168,13 +175,13 @@
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 .about-us-title {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 .about-us-list {
@@ -186,21 +193,21 @@
 .assurances-legend {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 .assurances-value td:nth-child(odd) {
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 .assurances-value td:nth-child(even) {
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
-  color: var(--title-text);
+  color: var(--basic-black);
 }
 
 /*partners*/
@@ -238,18 +245,18 @@
 }
 
 .social-icon:hover {
-  background-color: var(--button-red-hover);
+  background-color: var(--hover-red);
 }
 
 .social-icon:active {
-  background-color: var(--button-red-active);
+  background-color: var(--active-red);
 }
 
 .friendship {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  color: var(--title-text)
+  color: var(--basic-black)
 }
 
 .friendship-discount {
