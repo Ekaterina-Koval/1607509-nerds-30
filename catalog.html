@@ -13,179 +13,206 @@
 
 </head>
 
-<body class="page-body catalog-page">
+<body class="catalog-body">
 
   <header class="main-header">
-    <nav class="main-navigation">
-      <a href="index.html" class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65"
-          alt="Логотип дизайн-студии Нёрдс" /></a>
-      <div class="main-navigation">
+    <div class="container">
+      <nav class="main-navigation">
+        <a href="index.html" class="logo-nerds">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" />
+        </a>
         <ul class="site-navigation">
-          <li><a href="blank.html">Студия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
+          <li>
+            <a href="blank.html">Студия</a>
+          </li>
+          <li>
+            <a href="blank.html">Клиенты</a>
+          </li>
+          <li>
+            <a href="catalog.html">Магазин</a>
+          </li>
+          <li>
+            <a href="blank.html">Контакты</a>
+          </li>
         </ul>
-      </div>
-      <div class="user-navigation">
-        <a href="blank.html">Корзина</a>
-      </div>
-    </nav>
+        <div class="user-navigation">
+          <a href="blank.html">Корзина </a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+    <div class="container catalog-content">
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
 
-    <section>
-      <h2 class="invisible">Фильтр шаблонов</h2>
-      <form class="template-filter" method="get" action="#">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
-        <fieldset class="template-price">
-          <legend class="filter-title">Стоимость:</legend>
-          <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
-          <label>от<input class="price-range" type="text" name="from" value="0" /></label>
-          <label>до<input class="price-range" type="text" name="to" value="15000" /></label>
-        </fieldset>
+        <form class="template-filter" method="get" action="#">
 
-        <fieldset class="template-grid">
-          <legend class="filter-title">Сетка:</legend>
-          <ul class="grid">
-            <li class="grid-item">
-              <input type="radio" name="grid" value="adaptive" class="radio invisible" id="addaptive-item" checked />
-              <label for="addaptive-item">Адаптивная</label>
-            </li>
-            <li class="grid-item">
-              <input type="radio" name="grid" value="fixed" class="radio invisible" id="fixed-item" />
-              <label for="fixed-item">Фиксированная</label>
-            </li>
-            <li class="grid-item">
-              <input type="radio" name="grid" value="rubber" class="radio invisible" id="rubber-item" />
-              <label for="rubber-item">Резиновая</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="template-price">
+            <legend class="filter-title">
+              Стоимость:
+            </legend>
+            <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
+            <label>от<input class="price-range" type="text" name="from" value="0" /></label>
+            <label>до<input class="price-range" type="text" name="to" value="15000" /></label>
+          </fieldset>
 
-        <fieldset class="template-features">
-          <legend class="filter-title">Особенности:</legend>
-          <ul>
-            <li class="features-item">
-              <input type="checkbox" name="slider" class="checkbox invisible" id="slider-item" checked />
-              <label for="slider-item">Слайдер</label>
-            </li>
-            <li class="features-item">
-              <input type="checkbox" name="advantage" class="checkbox invisible" id="advantage-item" />
-              <label for="advantage-item">Блок преимуществ</label>
-            </li>
-            <li class="features-item">
-              <input type="checkbox" name="news" class="checkbox invisible" id="news-item" checked />
-              <label for="news-item">Новости</label>
-            </li>
-            <li class="features-item">
-              <input type="checkbox" name="gallery" class="checkbox invisible" id="gallery-item" />
-              <label for="gallery-item">Галерея</label>
-            </li>
-            <li class="features-item">
-              <input type="checkbox" name="characteristic" class="checkbox invisible" id="basket-item" />
-              <label for="basket-item">Корзина</label>
-            </li>
-          </ul>
-        </fieldset>
-        <input class="button grey-button" type="submit" value="Показать" />
-      </form>
-    </section>
+          <fieldset class="template-grid">
+            <legend class="filter-title">Сетка:</legend>
+            <ul class="grid">
+              <li class="grid-item">
+                <input type="radio" name="grid" value="adaptive" class="radio invisible" id="addaptive-item" checked />
+                <label for="addaptive-item">Адаптивная</label>
+              </li>
+              <li class="grid-item">
+                <input type="radio" name="grid" value="fixed" class="radio invisible" id="fixed-item" />
+                <label for="fixed-item">Фиксированная</label>
+              </li>
+              <li class="grid-item">
+                <input type="radio" name="grid" value="rubber" class="radio invisible" id="rubber-item" />
+                <label for="rubber-item">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
 
-    <section class="sorting">
-      <h2 class="invisible">Сортировка шаблонов</h2>
-      <p class="filter-title">Сортировать:</p>
-      <ul class="filter-type">
-        <li><a href="#">По цене</a></li>
-        <li><a href="#">По типу</a></li>
-        <li><a href="#">По названию</a></li>
-      </ul>
-      <ul class="filter-course">
-        <li><a href="#">По убыванию</a></li>
-        <li><a href="#">По возрастанию</a></li>
-      </ul>
+          <fieldset class="template-features">
+            <legend class="filter-title">Особенности:</legend>
+            <ul>
+              <li class="features-item">
+                <input type="checkbox" name="slider" class="checkbox invisible" id="slider-item" checked />
+                <label for="slider-item">Слайдер</label>
+              </li>
+              <li class="features-item">
+                <input type="checkbox" name="advantage" class="checkbox invisible" id="advantage-item" />
+                <label for="advantage-item">Блок преимуществ</label>
+              </li>
+              <li class="features-item">
+                <input type="checkbox" name="news" class="checkbox invisible" id="news-item" checked />
+                <label for="news-item">Новости</label>
+              </li>
+              <li class="features-item">
+                <input type="checkbox" name="gallery" class="checkbox invisible" id="gallery-item" />
+                <label for="gallery-item">Галерея</label>
+              </li>
+              <li class="features-item">
+                <input type="checkbox" name="characteristic" class="checkbox invisible" id="basket-item" />
+                <label for="basket-item">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
 
-    </section>
+          <input class="button grey-button" type="submit" value="Показать" />
 
-    <section class="templates">
-      <h2 class="invisible">Список шаблонов</h2>
-      <ul class="template-list">
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта Sedona</h3>
-              <img src="img/catalog/catalog-sedona.jpg" width="360" height="580" alt="Шаблон сайта Sedona" />
-            </a>
-          </div>
-        </li>
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта Pink App</h3>
-              <img src="img/catalog/catalog-pink.jpg" width="360" height="580" alt="Шаблон сайта Pink App">
-            </a>
-          </div>
-        </li>
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта Barbershop</h3>
-              <img src="img/catalog/catalog-barbershop.jpg" width="360" height="580" alt="Шаблон сайта Barbershop">
-            </a>
-          </div>
-        </li>
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта Mishka</h3>
-              <img src="img/catalog/catalog-mishka.jpg" width="360" height="580" alt="Шаблон сайта Mishka">
-            </a>
-          </div>
-        </li>
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта A Plus</h3>
-              <img src="img/catalog/catalog-academy.jpg" width="360" height="580" alt="Шаблон сайта A Plus">
-            </a>
-          </div>
-        </li>
-        <li class="temlate-item">
-          <div class="template-container">
-            <a href="#">
-              <h3 class="invisible">Шаблон сайта Kvas</h3>
-              <img src="img/catalog/catalog-kvas.jpg" width="360" height="580" alt="Шаблон сайта Kvas">
-            </a>
-          </div>
-        </li>
-      </ul>
-      <ol class="page-list">
-        <li><a class="button grey-button ">1</a></li>
-        <li><a class="button grey-button" href="#">2</a></li>
-        <li><a class="button grey-button" href="#">3</a></li>
-      </ol>
-      <a href="#" class="button grey-button">Следующая</a>
-    </section>
+        </form>
+      </section>
 
+      <section class="sorting">
+        <h2 class="visually-hidden">Сортировка шаблонов</h2>
+        <p class="filter-title">Сортировать:</p>
+        <ul class="filter-type">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По названию</a></li>
+        </ul>
+        <ul class="filter-course">
+          <li><a href="#">По убыванию</a></li>
+          <li><a href="#">По возрастанию</a></li>
+        </ul>
+      </section>
+
+      <section class="templates">
+        <h2 class="visually-hidden">Список шаблонов</h2>
+        <ul class="template-list">
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта Sedona</h3>
+                <img src="img/catalog/catalog-sedona.jpg" width="360" height="580" alt="Шаблон сайта Sedona" />
+              </a>
+            </div>
+          </li>
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта Pink App</h3>
+                <img src="img/catalog/catalog-pink.jpg" width="360" height="580" alt="Шаблон сайта Pink App">
+              </a>
+            </div>
+          </li>
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта Barbershop</h3>
+                <img src="img/catalog/catalog-barbershop.jpg" width="360" height="580" alt="Шаблон сайта Barbershop">
+              </a>
+            </div>
+          </li>
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта Mishka</h3>
+                <img src="img/catalog/catalog-mishka.jpg" width="360" height="580" alt="Шаблон сайта Mishka">
+              </a>
+            </div>
+          </li>
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта A Plus</h3>
+                <img src="img/catalog/catalog-academy.jpg" width="360" height="580" alt="Шаблон сайта A Plus">
+              </a>
+            </div>
+          </li>
+          <li class="temlate-item">
+            <div class="template-container">
+              <a href="#">
+                <h3 class="visually-hidden">Шаблон сайта Kvas</h3>
+                <img src="img/catalog/catalog-kvas.jpg" width="360" height="580" alt="Шаблон сайта Kvas">
+              </a>
+            </div>
+          </li>
+        </ul>
+        <ol class="page-list">
+          <li><a class="button grey-button ">1</a></li>
+          <li><a class="button grey-button" href="#">2</a></li>
+          <li><a class="button grey-button" href="#">3</a></li>
+        </ol>
+        <a href="#" class="button grey-button">Следующая</a>
+      </section>
+    </div>
   </main>
 
   <footer class="page-footer">
+
     <section class="map">
-      <h2 class="invisible">Как нас найти</h2>
-      <a><img src="img/main/map.png" width="1440" height="416" alt="Карта местоположения" /></a>
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <a>
+        <img class="map-image" src="img/main/map.png" width="1440" height="416" alt="Карта местоположения" />
+      </a>
     </section>
-    <section>
-      <ul class="footer-social">
-        <li class="social-icon"><a href="#">ВКонакте</a></li>
-        <li class="social-icon"><a href="#">Фейсбук</a></li>
-        <li class="social-icon"><a href="#">Инстаграм</a></li>
+
+    <section class="friendship container">
+      <ul class="social-icons">
+        <li class="social-icon">
+          <a href="#">ВКонакте</a>
+        </li>
+        <li class="social-icon">
+          <a href="#">Фейсбук</a>
+        </li>
+        <li class="social-icon">
+          <a href="#">Инстаграм</a>
+        </li>
       </ul>
-      <h2 class="invisible">Давайте дружить!</h2>
-      <p class="friendship">Давайте дружить, это выгодно!</p>
-      <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="friendship-offer">
+        <h2 class="visually-hidden">Давайте дружить!</h2>
+        <p class="friendship-title">Давайте дружить, это выгодно!</p>
+        <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
+
   </footer>
 
 </body>
