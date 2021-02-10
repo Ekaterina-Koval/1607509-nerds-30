@@ -18,20 +18,20 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <a href="index.html" class="logo-nerds">
+        <a class="logo-nerds">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" />
         </a>
         <ul class="site-navigation">
-          <li>
+          <li class="navigation-item">
             <a href="blank.html">Студия</a>
           </li>
-          <li>
+          <li class="navigation-item">
             <a href="blank.html">Клиенты</a>
           </li>
-          <li>
+          <li class="navigation-item">
             <a href="catalog.html">Магазин</a>
           </li>
-          <li>
+          <li class="navigation-item">
             <a href="blank.html">Контакты</a>
           </li>
         </ul>
@@ -43,12 +43,10 @@
   </header>
 
   <main>
+    <h1 class="catalog-title">Магазин готовых шаблонов</h1>
     <div class="container catalog-content">
-      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
-
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
-
         <form class="template-filter" method="get" action="#">
 
           <fieldset class="template-price">
@@ -56,8 +54,14 @@
               Стоимость:
             </legend>
             <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
-            <label>от<input class="price-range" type="text" name="from" value="0" /></label>
-            <label>до<input class="price-range" type="text" name="to" value="15000" /></label>
+            <label>
+              от
+              <input class="price-range" type="text" name="from" value="0" />
+            </label>
+            <label>
+              до
+              <input class="price-range" type="text" name="to" value="15000" />
+            </label>
           </fieldset>
 
           <fieldset class="template-grid">
@@ -113,13 +117,18 @@
         <h2 class="visually-hidden">Сортировка шаблонов</h2>
         <p class="filter-title">Сортировать:</p>
         <ul class="filter-type">
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По названию</a></li>
+          <li>
+            <a href="#">По цене</a></li>
+          <li>
+            <a href="#">По типу</a></li>
+          <li>
+            <a href="#">По названию</a></li>
         </ul>
         <ul class="filter-course">
-          <li><a href="#">По убыванию</a></li>
-          <li><a href="#">По возрастанию</a></li>
+          <li>
+            <a href="#">По убыванию</a></li>
+          <li>
+            <a href="#">По возрастанию</a></li>
         </ul>
       </section>
 
@@ -176,9 +185,12 @@
           </li>
         </ul>
         <ol class="page-list">
-          <li><a class="button grey-button ">1</a></li>
-          <li><a class="button grey-button" href="#">2</a></li>
-          <li><a class="button grey-button" href="#">3</a></li>
+          <li>
+            <a class="button grey-button ">1</a></li>
+          <li>
+            <a class="button grey-button" href="#">2</a></li>
+          <li>
+            <a class="button grey-button" href="#">3</a></li>
         </ol>
         <a href="#" class="button grey-button">Следующая</a>
       </section>
