@@ -83,9 +83,16 @@
 }
 
 .visually-hidden {
-  visibility: hidden;
   position: absolute;
-  clip: rect(0 0 0 0 );
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .invisible {
@@ -187,16 +194,52 @@
   outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px;
 }
+
+.site-navigation a {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+.user-navigation a {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.partners-list {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.partners-item {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.about-us-service-item {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.services {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+.about-us {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+ .assurances-value td {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
 */
 
 
 /*main navigation*/
 
-
-
 .main-navigation {
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -209,8 +252,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navigation-item {
@@ -221,15 +263,31 @@
   color: var(--basic-black);
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  padding-bottom: 13px;
 }
 
 .site-navigation a:hover, .user-navigation a:hover {
   color: var(--basic-red);
+
 }
 
 .site-navigation a:active, .user-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.site-navigation a:active, .user-navigation a:active {
+  border-bottom: 2px solid var(--basic-red);
+} /* ? необходимо сделать чтоб border-bottom оставался активным при условии "текущая страница"*/
+
+.cart-icon::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  padding-left: 25px;
+  background-image: url(../img/catalog/cart-icon.svg);
+  background-repeat: no-repeat;
 }
 
 /*feature*/
@@ -265,15 +323,22 @@
   z-index: 2;
 }
 
+.slider {
+  position: relative;
+}
+
 .slider-switch {
+  margin: 0;
+  padding: 0;
   list-style: none;
   width: 88px;
-  height: 18px;
+  position: absolute;
+  left: 536px;
+  bottom: 114px;
 }
 
 .slider-switch li {
   display: inline-block;
-  ;
 }
 
 .slider-item {
@@ -281,11 +346,15 @@
   grid-template-columns: 397px 760px;
 }
 
-
-
 /*services*/
+.services {
+  margin-top: 80px;
+  padding-bottom: 95px;
+  border-bottom: 2px solid var(--basic-grey);;
+}
 
 .service-list {
+  margin: 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -297,6 +366,11 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+
+.service-result {
+  width: 260px;
+  min-height: 53px;
 }
 
 .button.green-button {
@@ -327,8 +401,11 @@
 
 /*about-us*/
 .about-us {
-display: grid;
-grid-template-columns: 2fr 1fr;
+  margin-top: 39px;
+  padding-bottom: 73px;
+  border-bottom: 2px solid var(--basic-grey);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .about-us-discription {
@@ -339,9 +416,11 @@ grid-template-columns: 2fr 1fr;
 }
 
 .about-us-principles {
+  margin-top: 32px;
   width: 646px;
 }
 .about-us-services {
+  margin-top: 40px;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--basic-black);
@@ -350,7 +429,19 @@ grid-template-columns: 2fr 1fr;
 .about-us-service-list {
   list-style: none;
 }
+.about-us-service-item {
+padding: 16px 0 0 32px;
+}
 
+.about-us-service-item::before {
+  content: "";
+  position: absolute;
+  margin-left: -32px;
+  margin-top: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+}
 /*assurances*/
 
 .assurances-legend {
@@ -364,6 +455,7 @@ grid-template-columns: 2fr 1fr;
   font-size: 45px;
   line-height: 64px;
   color: var(--basic-black);
+  vertical-align: top;
 }
 
 .assurances-value td:nth-child(even) {
@@ -371,16 +463,36 @@ grid-template-columns: 2fr 1fr;
   font-size: 26px;
   line-height: 40px;
   color: var(--basic-black);
+  vertical-align: top;
 }
 
 /*partners*/
 
 .partners-list {
   list-style: none;
-  padding: 0;
+  padding: 46px 0 44px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid var(--basic-grey);
+  background-image:
+  url(../img/catalog/line-logo-partners.svg),
+  url(../img/catalog/line-logo-partners.svg),
+  url(../img/catalog/line-logo-partners.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 25% 50%, 50% 50%, 75% 50%;
 }
+
+/* удалить
+
+.partners-item::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-grey);
+  margin-left: 48px;
+}*/
 
 .logo-partners:not(:hover) {
   opacity: 0.2;
@@ -391,6 +503,10 @@ grid-template-columns: 2fr 1fr;
 }
 
 /*footer*/
+
+.page-footer {
+  margin-top: 80px;
+}
 
 .map-image{
   width: 100%;

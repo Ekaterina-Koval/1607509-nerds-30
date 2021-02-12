@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>Дизайн-студия Нёрдс</title>
+  <meta charset="utf-8">
+  <title>Дизайн-студия Нёрдс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
-<body>
+<body class="page-body">
 
-    <header>
-        <a><img src="https://via.placeholder.com/159.87х65.02" alt="Логотип дизайн-студии Нёрдс"></a>
-        <nav>
-            <ul>
-                <li><a href="blank.html">Студия</a></li>
-                <li><a href="blank.html">Клиенты</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="blank.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <a href="blank.html">Корзина</a>
-    </header>
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <a class="logo-nerds">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" />
+        </a>
+        <ul class="site-navigation">
+          <li class="navigation-item">
+            <a href="index.html">Студия</a>
+          </li>
+          <li class="navigation-item">
+            <a href="blank.html">Клиенты</a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html">Магазин</a>
+          </li>
+          <li class="navigation-item">
+            <a href="blank.html">Контакты</a>
+          </li>
+        </ul>
+        <div class="user-navigation">
+          <a class="cart-icon" href="blank.html">Корзина </a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
     <main>
         <h1>Пустая</h1>
@@ -29,20 +50,34 @@
         </ul>
     </main>
 
-    <footer>
-        <section>
-            <h2>Карта</h2>
-        </section>
-        <section>
-            <ul>
-                <li><a href="#">ВКонакте</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Инстаграм</a></li>
-            </ul>
-            <h2>Давайте дружить!</h2>
-            <p>Давайте дружить, это выгодно!</p>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+    <footer class="page-footer">
+
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <a>
+          <img class="map-image" src="img/main/map.png" width="1440" height="416" alt="Карта местоположения" />
+        </a>
+      </section>
+
+      <section class="friendship container">
+        <ul class="social-icons">
+          <li class="social-icon">
+            <a href="#">ВКонакте</a>
+          </li>
+          <li class="social-icon">
+            <a href="#">Фейсбук</a>
+          </li>
+          <li class="social-icon">
+            <a href="#">Инстаграм</a>
+          </li>
+        </ul>
+        <div class="friendship-offer">
+          <h2 class="visually-hidden">Давайте дружить!</h2>
+          <p class="friendship-title">Давайте дружить, это выгодно!</p>
+          <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
+
     </footer>
 
 </body>
