@@ -54,23 +54,30 @@
               Стоимость:
             </legend>
             <div class="price-range-wrapper">
-              <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
+              <div class="scale">
+                <div class="bar" style="width: 70%; left: 0%"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 10%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 65%"></div>
             </div>
-            <label>
-              от
-              <input class="price-range-from" type="text" name="from" value="0" />
-            </label>
-            <label>
-              до
-              <input class="price-range-to" type="text" name="to" value="15000" />
-            </label>
+            <div class="price-controls">
+              <label>
+                от
+                <input class="min-price" type="number" name="from" value="0" />
+              </label>
+              <label>
+                до
+                <input class="max-price" type="number" name="to" value="15000" />
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="template-grid">
             <legend class="filter-title grid-title">Сетка:</legend>
             <ul class="grid">
               <li class="grid-item">
-                <input type="radio" name="grid" value="adaptive" class="radio visually-hidden" id="addaptive-item" checked />
+                <input type="radio" name="grid" value="adaptive" class="radio visually-hidden" id="addaptive-item"
+                  checked />
                 <label for="addaptive-item">Адаптивная</label>
               </li>
               <li class="grid-item">
