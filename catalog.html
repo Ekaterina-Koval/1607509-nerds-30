@@ -18,7 +18,7 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <a class="logo-nerds">
+        <a href="index.html" class="logo-nerds">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" />
         </a>
         <ul class="site-navigation">
@@ -28,7 +28,7 @@
           <li class="navigation-item">
             <a href="blank.html">Клиенты</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item-current">
             <a href="catalog.html">Магазин</a>
           </li>
           <li class="navigation-item">
@@ -53,56 +53,58 @@
             <legend class="filter-title">
               Стоимость:
             </legend>
-            <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
+            <div class="price-range-wrapper">
+              <input class="price-range" type="range" min="0" max="25000" step="1" value="15000" />
+            </div>
             <label>
               от
-              <input class="price-range" type="text" name="from" value="0" />
+              <input class="price-range-from" type="text" name="from" value="0" />
             </label>
             <label>
               до
-              <input class="price-range" type="text" name="to" value="15000" />
+              <input class="price-range-to" type="text" name="to" value="15000" />
             </label>
           </fieldset>
 
           <fieldset class="template-grid">
-            <legend class="filter-title">Сетка:</legend>
+            <legend class="filter-title grid-title">Сетка:</legend>
             <ul class="grid">
               <li class="grid-item">
-                <input type="radio" name="grid" value="adaptive" class="radio invisible" id="addaptive-item" checked />
+                <input type="radio" name="grid" value="adaptive" class="radio visually-hidden" id="addaptive-item" checked />
                 <label for="addaptive-item">Адаптивная</label>
               </li>
               <li class="grid-item">
-                <input type="radio" name="grid" value="fixed" class="radio invisible" id="fixed-item" />
+                <input type="radio" name="grid" value="fixed" class="radio visually-hidden" id="fixed-item" />
                 <label for="fixed-item">Фиксированная</label>
               </li>
               <li class="grid-item">
-                <input type="radio" name="grid" value="rubber" class="radio invisible" id="rubber-item" />
+                <input type="radio" name="grid" value="rubber" class="radio visually-hidden" id="rubber-item" />
                 <label for="rubber-item">Резиновая</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="template-features">
-            <legend class="filter-title">Особенности:</legend>
+            <legend class="filter-title features-title">Особенности:</legend>
             <ul>
               <li class="features-item">
-                <input type="checkbox" name="slider" class="checkbox invisible" id="slider-item" checked />
+                <input type="checkbox" name="slider" class="checkbox visually-hidden" id="slider-item" checked />
                 <label for="slider-item">Слайдер</label>
               </li>
               <li class="features-item">
-                <input type="checkbox" name="advantage" class="checkbox invisible" id="advantage-item" />
+                <input type="checkbox" name="advantage" class="checkbox visually-hidden" id="advantage-item" />
                 <label for="advantage-item">Блок преимуществ</label>
               </li>
               <li class="features-item">
-                <input type="checkbox" name="news" class="checkbox invisible" id="news-item" checked />
+                <input type="checkbox" name="news" class="checkbox visually-hidden" id="news-item" checked />
                 <label for="news-item">Новости</label>
               </li>
               <li class="features-item">
-                <input type="checkbox" name="gallery" class="checkbox invisible" id="gallery-item" />
+                <input type="checkbox" name="gallery" class="checkbox visually-hidden" id="gallery-item" />
                 <label for="gallery-item">Галерея</label>
               </li>
               <li class="features-item">
-                <input type="checkbox" name="characteristic" class="checkbox invisible" id="basket-item" />
+                <input type="checkbox" name="characteristic" class="checkbox visually-hidden" id="basket-item" />
                 <label for="basket-item">Корзина</label>
               </li>
             </ul>
@@ -130,9 +132,15 @@
         <ul class="filter-course">
           <li class="sort-down">
             <a class="visually-hidden" href="#">По убыванию</a>
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#231F20" />
+            </svg>
           </li>
           <li class="sort-up">
             <a class="visually-hidden" href="#">По возрастанию</a>
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#231F20" />
+            </svg>
           </li>
         </ul>
       </section>
@@ -189,18 +197,20 @@
 
           </li>
         </ul>
-        <ol class="page-list">
-          <li>
-            <a class="button grey-button ">1</a>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="button grey-button page-current">1</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a class="button grey-button" href="#">2</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a class="button grey-button" href="#">3</a>
           </li>
-        </ol>
-        <a href="#" class="button grey-button">Следующая</a>
+          <li class="pagination-item">
+            <a href="#" class="button grey-button">Следующая</a>
+          </li>
+        </ul>
       </section>
     </div>
   </main>
