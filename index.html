@@ -21,118 +21,134 @@
         <a class="logo-nerds">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" />
         </a>
-        <ul class="site-navigation">
-          <li class="navigation-item-current">
-            <a href="index.html">Студия</a>
+        <ul class="navigation-list">
+          <li class="navigation-item navigation-item-current">
+            <a class="navigation-item-link" href="index.html">Студия</a>
           </li>
           <li class="navigation-item">
-            <a href="blank.html">Клиенты</a>
+            <a class="navigation-item-link" href="blank.html">Клиенты</a>
           </li>
           <li class="navigation-item">
-            <a href="catalog.html">Магазин</a>
+            <a class="navigation-item-link" href="catalog.html">Магазин</a>
           </li>
           <li class="navigation-item">
-            <a href="blank.html">Контакты</a>
+            <a class="navigation-item-link" href="blank.html">Контакты</a>
           </li>
         </ul>
-        <div class="user-navigation">
-          <a class="cart-icon" href="blank.html">Корзина </a>
+        <div class="user-basket">
+          <a class="navigation-item-link" href="blank.html">
+            Корзина
+          </a>
         </div>
       </nav>
     </div>
   </header>
 
   <main class="main-content">
-    <div class="feature">
-      <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-      <section class="container feature-slider">
+    <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
+    <div class="feature-wrapper">
+      <section class="container feature-container">
         <h2 class="visually-hidden">Преимущества</h2>
-        <div class="slider">
-          <ul class="slider-list">
-            <li class="slider-item">
-              <div class="slider-context">
-                <p class="feature-motto">Долго, дорого, скрупулезно.</p>
-                <p class="feature-mission">Математически выверенный дизайн <br />
-                  для вашего сайта или мобильного приложения.</p>
-                <a class="button" href="#">Узнать больше</a>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <div class="feature-context">
+              <p class="feature-motto">
+                Долго, дорого, скрупулезно.</p>
+              <p class="feature-mission">
+                Математически выверенный дизайн <br />
+                для вашего сайта или мобильного приложения.</p>
+              <div class="feature-button">
+                <a class="feature-button-link" href="#">Узнать больше</a>
               </div>
-              <img class="feature-image" src="img/main/slide1.png" alt="Смартфоны на фоне красной графики" />
-            </li>
-            <li class="slider-item">
-              <div class="slider-context">
-                <p class="feature-motto">Любим математику
-                  как никто другой</p>
-                <p class="feature-mission">Никакого креатива, только математические формулы <br />
-                  для расчета идеальных пропорций</p>
-                <a class="button" href="#">Узнать больше</a>
+            </div>
+            <img class="feature-image" src="img/main/slide1.png" width="760" height="430"
+              alt="Смартфоны на фоне красной графики" />
+          </li>
+          <li class="feature-item">
+            <div class="feature-context">
+              <p class="feature-motto">
+                Любим математику как никто другой</p>
+              <p class="feature-mission">
+                Никакого креатива, только математические формулы <br />
+                для расчета идеальных пропорций</p>
+              <div class="feature-button">
+                <a class="feature-button-link" href="#">
+                  Узнать больше
+                </a>
               </div>
-              <img class="feature-image" src="img/main/slide2.png" alt="Планшеты на фоне красной графики" />
-            </li>
-            <li class="slider-item">
-              <div class="slider-context">
-                <p class="feature-motto">Только ночь, только хардкор</p>
-                <p class="feature-mission">Работать днем, как все? Мы против этого. <br />
-                  Ближе к полуночи работа только начинается.</p>
-                <a class="button" href="#">Узнать больше</a>
+            </div>
+            <img class="feature-image" src="img/main/slide2.png" width="760" height="430"
+              alt="Планшеты на фоне красной графики" />
+          </li>
+          <li class="feature-item">
+            <div class="feature-context">
+              <p class="feature-motto">
+                Только ночь, только хардкор</p>
+              <p class="feature-mission">
+                Работать днем, как все? Мы против этого. <br />
+                Ближе к полуночи работа только начинается.</p>
+              <div class="feature-button">
+                <a class="feature-button-link" href="#">
+                  Узнать больше
+                </a>
               </div>
-              <img class="feature-image" src="img/main/slide3.png" alt="Смартфон и планшет на фоне красной графики" />
-            </li>
-          </ul>
-          <ul class="slider-switch">
-            <li>
-              <input type="radio" name="slider" value="slide1" checked />
-            </li>
-            <li>
-              <input type="radio" name="slider" value="slide2" />
-            </li>
-            <li>
-              <input type="radio" name="slider" value="slide3" />
-            </li>
-          </ul>
+            </div>
+            <img class="feature-image" src="img/main/slide3.png" width="760" height="430"
+              alt="Смартфон и планшет на фоне красной графики" />
+          </li>
+        </ul>
+        <div class="slider-control">
+          <button class="slider-button slider-button-current" type="button" aria-label="slide1"></button>
+          <button class="slider-button" type="button" aria-label="slide2"></button>
+          <button class="slider-button" type="button" aria-label="slide3"></button>
         </div>
       </section>
     </div>
-
-    <section class="container services">
+    <section class="services container">
       <h2 class="visually-hidden">Наши услуги</h2>
       <ul class="service-list">
         <li class="service-item">
           <img class="service-image" src="img/main/illustration-1.png" width="300" height="146"
             alt="Монитор на красном фоне" />
-          <h3 class="service-title">Веб-сайты</h3>
-          <p class="service-result">Мир никогда не будет прежним
-            после того как увидит ваш сайт!</p>
-          <a class="button red-button" href="#">Заказать</a>
+          <h3 class="service-item-title">Веб-сайты</h3>
+          <p class="service-result">
+            Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="servise-button service-button-red" href="#">
+            Заказать
+          </a>
         </li>
         <li class="service-item">
           <img class="service-image" src="img/main/illustration-2.png" width="300" height="146"
             alt="Смартфоны на зеленом фоне" />
-          <h3 class="service-title">Приложения</h3>
-          <p class="service-result">Покорите топ-10 приложений
-            в AppStore и Google Play</p>
-          <a class="button green-button" href="#">Заказать</a>
+          <h3 class="service-item-title">Приложения</h3>
+          <p class="service-result">
+            Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="servise-button service-button-green" href="#">
+            Заказать
+          </a>
         </li>
         <li class="service-item">
           <img class="service-image" src="img/main/illustration-3.png" width="300" height="146"
             alt="Флипчарт на желтом фоне" />
-          <h3 class="service-title">Презентации</h3>
-          <p class="service-result">Вы даже не подозреваете,
-            насколько вы изумительны!</p>
-          <a class="button yellow-button" href="#">Заказать</a>
+          <h3 class="service-item-title">Презентации</h3>
+          <p class="service-result">
+            Вы даже не подозреваете, насколько вы изумительны!
+          </p>
+          <a class="servise-button service-button-yellow" href="#">
+            Заказать
+          </a>
         </li>
       </ul>
     </section>
-
-    <section class="container about-us">
+    <section class="about-us container">
+      <h2 class="visually-hidden">О нас</h2>
       <div class="about-us-information">
-        <h2 class="visually-hidden">О нас</h2>
         <p class="about-us-discription">
-          Мы — маленькая, но гордая
-          дизайн-студия из Краснодара.</p>
+          Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p class="about-us-principles">
           Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <h2 class="about-us-services">Выполняем заказы на разработку:</h2>
+        <h2 class="about-us-services-title">Выполняем заказы на разработку:</h2>
         <ul class="about-us-service-list">
           <li class="about-us-service-item">
             Веб-сайтов любой сложности</li>
@@ -142,33 +158,28 @@
             Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-
       <div class="assurances">
         <h2 class="visually-hidden">Мы гарантируем</h2>
         <img class="assurances-image" src="img/main/nerds-illustration.png" width="360" height="208"
           alt="Nёrds на фоне разноцветных блоков" />
-        <table class="assurances-points">
+        <table class="assurances-table">
           <caption class="assurances-legend">
-            с 2004 года Любим точность во всем:
+            С 2004 года любим точность во всем:
           </caption>
           <tr class="assurances-value">
-            <td>146</td>
-            <td>%</td>
-            <td>100</td>
-            <td>%</td>
-            <td>50</td>
-            <td>%</td>
+            <td>146<span class="assurances-sup">%</span></td>
+            <td>100<span class="assurances-sup">%</span></td>
+            <td>50<span class="assurances-sup">%</span></td>
           </tr>
-          <tr>
-            <td colspan="2">Уровень самоотдачи</td>
-            <td colspan="2">Соблюдение сроков</td>
-            <td colspan="2">Минимальная предоплата</td>
+          <tr class="assurances-item">
+            <td>Уровень самоотдачи</td>
+            <td>Соблюдение сроков</td>
+            <td>Минимальная предоплата</td>
           </tr>
         </table>
       </div>
     </section>
-
-    <section class="container partners">
+    <section class="partners container">
       <h2 class="visually-hidden">Наши партнёры</h2>
       <ul class="partners-list">
         <li class="partners-item">
@@ -193,38 +204,101 @@
         </li>
       </ul>
     </section>
-
   </main>
 
   <footer class="page-footer">
-
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <a>
-        <img class="map-image" src="img/main/map.png" width="1440" height="416" alt="Карта местоположения" />
-      </a>
+      <div class="container map-contacts">
+        <div class="contacts">
+          <h3 class="contacts-title">Nёrds Design Studuo</h3>
+          <address class="contacts-adress">
+            191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </address>
+          <a class="contacts-phone-number" href="tel:+78122757575">
+            тел. +7 (812)275-75-75
+          </a>
+          <div class="contacts-button">
+            <a class="contacts-button-link" href=#>
+              Напишите нам
+            </a>
+          </div>
+        </div>
+      </div>
+      <img class="map-image" src="img/main/map.png" width="1440" height="416"
+        alt="191186 Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
     </section>
-
     <section class="friendship container">
-      <ul class="social-icons">
-        <li class="social-icon">
-          <a href="#">ВКонакте</a>
+      <ul class="social-list">
+        <li class="social-item">
+          <div class="social-icon-wrapper">
+            <a class="social-icon" href="#">
+              <span class="visually-hidden">
+                ВКонакте
+              </span>
+              <img src="img/main/vk-icon.svg" width="26" height="15" alt="vk" />
+            </a>
+          </div>
         </li>
-        <li class="social-icon">
-          <a href="#">Фейсбук</a>
+        <li class="social-item">
+          <div class="social-icon-wrapper">
+            <a class="social-icon" href="#">
+              <span class="visually-hidden">
+                Фейсбук
+              </span>
+              <img src="img/main/fb-icon.svg" width="12" height="22" alt="facebook" />
+            </a>
+          </div>
         </li>
-        <li class="social-icon">
-          <a href="#">Инстаграм</a>
+        <li class="social-item">
+          <div class="social-icon-wrapper">
+            <a class="social-icon" href="#">
+              <span class="visually-hidden">
+                Инстаграм
+              </span>
+              <img src="img/main/insta-icon.svg" width="21" height="21" alt="facebook" />
+            </a>
+          </div>
         </li>
       </ul>
       <div class="friendship-offer">
         <h2 class="visually-hidden">Давайте дружить!</h2>
-        <p class="friendship-title">Давайте дружить, это выгодно!</p>
-        <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
+        <p class="friendship-motto">
+          Давайте дружить, это выгодно!</p>
+        <p class="friendship-discount">
+          Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </section>
-
   </footer>
+
+  <section class="modal modal-feedback">
+    <h2 class="feedback-title">Напишите нам</h2>
+    <form class="feedback-form" method="post" action="#">
+      <p class="feedback-item">
+        <label for="feedback-name" class="label-feedback-field">
+          Ваше имя:
+        </label>
+        <input class="feedback-field" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия" />
+      </p>
+      <p class="feedback-item">
+        <label for="feedback-email" class="label-feedback-field">
+          Ваш email:</label>
+        <input class="feedback-field" type="email" name="email" id="feedback-email" placeholder="email@example.com" />
+      </p>
+      <label for="feedback-letter" class="label-feedback-field">
+        Текст письма:
+      </label>
+      <textarea class="feedback-textarea" name="feedback-text" id="feedback-letter">
+        В свободной форме
+      </textarea>
+      <input class="button-feedback-send" type="submit" value="Отправить">
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">
+        Закрыть
+      </span>
+    </button>
+  </section>
 
 </body>
 
