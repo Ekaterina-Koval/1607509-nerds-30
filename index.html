@@ -225,8 +225,11 @@
           </div>
         </div>
       </div>
-      <img class="map-image" src="img/main/map.png" width="1440" height="416"
-        alt="191186 Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
+      <div class="map-image-wrapper">
+        <img class="map-image-view" src="img/main/map.png" width="1440" height="416"
+          alt="191186 Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
+        <img class="map-image-marker" src="img/main/map-marker.png" width="231" height="190" alt="Маркер местоположения"/>
+      </div>
     </section>
     <section class="friendship container">
       <ul class="social-list">
@@ -271,7 +274,7 @@
     </section>
   </footer>
 
-  <section class="modal modal-feedback">
+  <section class="modal modal-feedback visually-hidden">
     <h2 class="feedback-title">Напишите нам</h2>
     <form class="feedback-form" method="post" action="#">
       <p class="feedback-item">
@@ -299,6 +302,8 @@
       </span>
     </button>
   </section>
+
+<script async src="//pixel-perfect.org/service/script.js?guid=5de51f19650b4cf6aba05ff7937f5b7c"></script>
 
 </body>
 
