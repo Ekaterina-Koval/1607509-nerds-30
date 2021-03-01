@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/icons/apple.png">
+  <link rel="icon" href="img/nerds-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/nerds-logo.png">
   <link rel="manifest" href="manifest.webmanifest">
 
 </head>
@@ -35,11 +35,14 @@
             <a class="navigation-item-link" href="blank.html">Контакты</a>
           </li>
         </ul>
-        <div class="user-basket">
-          <a class="navigation-item-link" href="blank.html">
-            Корзина
-          </a>
-        </div>
+        <ul class="navigation-list-user ">
+          <li class="navigation-item navigation-item-user">
+            <a class="navigation-item-link" href="blank.html">
+              Корзина
+            </a>
+          </li>
+        </ul>
+
       </nav>
     </div>
   </header>
@@ -58,17 +61,21 @@
               <div class="price-scale">
                 <div class="price-bar"></div>
               </div>
-              <div class="toggle toggle-min" tabindex="0"></div>
-              <div class="toggle toggle-max" tabindex="0"></div>
+              <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">"Ползунок - минимальная
+                  стоимость"</span></div>
+              <div class="toggle toggle-max" tabindex="0"><span class="visually-hidden">"Ползунок - максимальная
+                  стоимость"</span></div>
             </div>
             <div class="price-controls">
               <label>
                 от
-                <input class="min-price" type="text" name="from" value="0" />
+                <input class="min-price" type="text" name="from" value="0"
+                  aria-label="Текстовое поле - минимальная стоимость" />
               </label>
               <label>
                 до
-                <input class="max-price" type="text" name="to" value="15000" />
+                <input class="max-price" type="text" name="to" value="15&nbsp;000"
+                  aria-label="Текстовое поле - максимальная стоимость" />
               </label>
             </div>
           </fieldset>
@@ -164,7 +171,7 @@
             </a>
           </li>
           <li class="sorting-item">
-            <a class="sort-direction active-direction" href="#">
+            <a class="sort-direction" href="#" aria-label="По убыванию">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="sort-direction-path" d="M5.5 10L0 0H11" fill="#231F20" />
               </svg>
@@ -193,7 +200,6 @@
               </a>
               <p class="template-item-text">
                 Информационный сайт для туристов</p>
-
               <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
                 aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
@@ -209,7 +215,8 @@
               </a>
               <p class="template-item-text">
                 Продуктовый лендинг приложения для iOS и Android</p>
-              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;" />
+              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
+                aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
           </li>
           <li class="template-item">
@@ -223,7 +230,8 @@
               </a>
               <p class="template-item-text">
                 Сайт салона красоты. Для мужчин, да.</p>
-              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;" />
+              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
+                aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
           </li>
           <li class="template-item">
@@ -237,7 +245,8 @@
               </a>
               <p class="template-item-text">
                 Интернет-магазин вязаных игрушек</p>
-              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;" />
+              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
+                aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
           </li>
           <li class="template-item">
@@ -251,7 +260,8 @@
               </a>
               <p class="template-item-text">
                 Лендинг курсов повышения квалификации</p>
-              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;" />
+              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
+                aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
           </li>
           <li class="template-item">
@@ -265,10 +275,12 @@
               </a>
               <p class="template-item-text">
                 Промо-сайт производителя крафтового кваса</p>
-              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;" />
+              <input class="template-item-button" type="submit" value="9&nbsp;900 &#8381;"
+                aria-label="Стоимость 9900 рублей. Добавить шаблон сайта sedona в корзину" />
             </div>
           </li>
         </ul>
+        <h3 class="visually-hidden">Навигация по страницам каталога</h3>
         <ul class="pagination-list">
           <li class="pagination-item page-current">
             <a class="pagination-link">1</a>
