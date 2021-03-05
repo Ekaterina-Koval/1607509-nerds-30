@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/nerds-logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/nerds-logo.png">
@@ -304,21 +304,25 @@
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="container map-contacts">
         <div class="contacts">
-          <h3 class="contacts-title">Nёrds Design Studuo</h3>
+          <h3 class="contacts-title">Nёrds Design Studio</h3>
           <address class="contacts-adress">
-            191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            191186, Санкт-Петербург,<br /> ул. Б. Конюшенная, д. 19/8
           </address>
           <a class="contacts-phone-number" href="tel:+78122757575">
-            тел. +7 (812)275-75-75
+            тел. +7 (812) 275-75-75
           </a>
           <div class="contacts-button">
-            <a class="contacts-button-link" href=#>
+            <a class="contacts-button-link" href="#">
               Напишите нам
             </a>
           </div>
         </div>
       </div>
       <div class="map-image-wrapper">
+        <iframe class="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003217!2d30.320858716208942!3d59.93871916905398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614729702586!5m2!1sru!2sru"
+          width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
         <img class="map-image-view" src="img/main/map.png" width="1440" height="416"
           alt="191186 Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
         <img class="map-image-marker" src="img/main/map-marker.png" width="231" height="190"
@@ -330,30 +334,21 @@
         <li class="social-item">
           <div class="social-icon-wrapper">
             <a class="social-icon" href="#">
-              <span class="visually-hidden">
-                ВКонакте
-              </span>
-              <img src="img/main/vk-icon.svg" width="26" height="15" alt="vk" />
+              <img src="img/main/vk-icon.svg" width="26" height="15" alt="ВКонтакте" />
             </a>
           </div>
         </li>
         <li class="social-item">
           <div class="social-icon-wrapper">
             <a class="social-icon" href="#">
-              <span class="visually-hidden">
-                Фейсбук
-              </span>
-              <img src="img/main/fb-icon.svg" width="12" height="22" alt="facebook" />
+              <img src="img/main/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
             </a>
           </div>
         </li>
         <li class="social-item">
           <div class="social-icon-wrapper">
             <a class="social-icon" href="#">
-              <span class="visually-hidden">
-                Инстаграм
-              </span>
-              <img src="img/main/insta-icon.svg" width="21" height="21" alt="facebook" />
+              <img src="img/main/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
             </a>
           </div>
         </li>
@@ -367,6 +362,37 @@
       </div>
     </section>
   </footer>
+
+  <section class="modal modal-feedback visually-hidden">
+    <h2 class="feedback-title">Напишите нам</h2>
+    <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru/">
+      <p class="feedback-item">
+        <label for="feedback-name" class="label-feedback-field">
+          Ваше имя:
+        </label>
+        <input class="feedback-field" type="text" name="username" id="feedback-name" placeholder="Имя Фамилия" />
+      </p>
+      <p class="feedback-item">
+        <label for="feedback-email" class="label-feedback-field">
+          Ваш email:
+        </label>
+        <input class="feedback-field" type="email" name="email" id="feedback-email" placeholder="email@example.com" />
+      </p>
+      <label for="feedback-letter" class="label-feedback-field">
+        Текст письма:
+      </label>
+      <textarea class="feedback-textarea" name="feedback-text" placeholder="В свободной форме" autocomplete="off"
+        id="feedback-letter"></textarea>
+      <input class="button-feedback-send" type="submit" value="Отправить">
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">
+        Закрыть
+      </span>
+    </button>
+  </section>
+
+  <script src="js/modal.min.js"></script>
 
 </body>
 

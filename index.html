@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons/apple.png">
@@ -33,7 +33,8 @@
             <a class="navigation-item-link" href="catalog.html">Магазин</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-item-link" href="blank.html">Контакты</a></li>
+            <a class="navigation-item-link" href="blank.html">Контакты</a>
+          </li>
         </ul>
         <ul class="navigation-list-user ">
           <li class="navigation-item navigation-item-user">
@@ -63,10 +64,10 @@
                 <a class="feature-button-link" href="#">Узнать больше</a>
               </div>
             </div>
-            <img class="feature-image" src="img/main/slide1.png" width="760" height="430"
+            <img class="feature-image" src="img/main/slide1.png" width="760" height="431"
               alt="Смартфоны на фоне красной графики" />
           </li>
-          <li class="feature-item visually-hidden">
+          <li class="feature-item visually-hidden feature-item-display-none">
             <div class="feature-context">
               <p class="feature-motto">
                 Любим математику как никто другой</p>
@@ -79,10 +80,10 @@
                 </a>
               </div>
             </div>
-            <img class="feature-image" src="img/main/slide2.png" width="760" height="430"
+            <img class="feature-image" src="img/main/slide2.png" width="760" height="431"
               alt="Планшеты на фоне красной графики" />
           </li>
-          <li class="feature-item visually-hidden">
+          <li class="feature-item visually-hidden feature-item-display-none">
             <div class="feature-context">
               <p class="feature-motto">
                 Только ночь, только хардкор</p>
@@ -95,7 +96,7 @@
                 </a>
               </div>
             </div>
-            <img class="feature-image" src="img/main/slide3.png" width="760" height="430"
+            <img class="feature-image" src="img/main/slide3.png" width="760" height="431"
               alt="Смартфон и планшет на фоне красной графики" />
           </li>
         </ul>
@@ -231,6 +232,10 @@
         </div>
       </div>
       <div class="map-image-wrapper">
+        <iframe class="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003217!2d30.320858716208942!3d59.93871916905398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614729702586!5m2!1sru!2sru"
+          width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
         <img class="map-image-view" src="img/main/map.png" width="1440" height="416"
           alt="191186 Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
         <img class="map-image-marker" src="img/main/map-marker.png" width="231" height="190"
@@ -273,23 +278,24 @@
 
   <section class="modal modal-feedback visually-hidden">
     <h2 class="feedback-title">Напишите нам</h2>
-    <form class="feedback-form" method="post" action="#">
+    <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru/">
       <p class="feedback-item">
         <label for="feedback-name" class="label-feedback-field">
           Ваше имя:
         </label>
-        <input class="feedback-field" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия" />
+        <input class="feedback-field" type="text" name="username" id="feedback-name" placeholder="Имя Фамилия" />
       </p>
       <p class="feedback-item">
         <label for="feedback-email" class="label-feedback-field">
-          Ваш email:</label>
+          Ваш email:
+        </label>
         <input class="feedback-field" type="email" name="email" id="feedback-email" placeholder="email@example.com" />
       </p>
       <label for="feedback-letter" class="label-feedback-field">
+        Текст письма:
       </label>
-      <textarea class="feedback-textarea" name="feedback-text" id="feedback-letter" placeholder="Текст письма:">
-        В свободной форме
-      </textarea>
+      <textarea class="feedback-textarea" name="feedback-text" placeholder="В свободной форме" autocomplete="off"
+        id="feedback-letter"></textarea>
       <input class="button-feedback-send" type="submit" value="Отправить">
     </form>
     <button class="modal-close" type="button">
@@ -298,6 +304,8 @@
       </span>
     </button>
   </section>
+
+  <script src="js/modal.min.js"></script>
 
 </body>
 
