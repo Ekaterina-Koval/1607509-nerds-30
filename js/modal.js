@@ -1,6 +1,6 @@
-const contactsButton = document.querySelector(".contacts-button");
-const modal = document.querySelector(".modal-feedback");
-const close = document.querySelector(".modal-close");
+const contactsButton = document.querySelector('.contacts-button');
+const modal = document.querySelector('.modal-feedback');
+const close = document.querySelector('.modal-close');
 const fieldName = modal.querySelector('.feedback-field');
 const feedbackForm = modal.querySelector('.feedback-form');
 const userName = modal.querySelector('[name=username]');
@@ -8,23 +8,25 @@ const eMail = modal.querySelector('[name=email]');
 const feedbackText = modal.querySelector('[name=feedback-text]');
 
 
-contactsButton.addEventListener("click", function (event) {
+contactsButton.addEventListener('click', function (event) {
   event.preventDefault();
-  modal.classList.remove("visually-hidden");
+  modal.classList.remove('visually-hidden');
+  modal.classList.add('modal-open');
   fieldName.focus();
 });
 
-close.addEventListener("click", function (event) {
+close.addEventListener('click', function (event) {
   event.preventDefault();
-  modal.classList.add("visually-hidden");
+  modal.classList.add('visually-hidden');
   modal.classList.remove('modal-error');
+  modal.classList.remove('modal-open');
 });
 
 window.addEventListener('keydown', function (event) {
   if (event.keyCode === 27) {
-    if (!modal.classList.contains("vishually-hidden")) {
+    if (!modal.classList.contains('vishually-hidden')) {
       event.preventDefault();
-      modal.classList.add("visually-hidden");
+      modal.classList.add('visually-hidden');
       modal.classList.remove('modal-error');
     }
   }
