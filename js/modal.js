@@ -7,7 +7,7 @@ const userName = modal.querySelector('[name=username]');
 const eMail = modal.querySelector('[name=email]');
 const feedbackText = modal.querySelector('[name=feedback-text]');
 
-const slides = document.querySelectorAll(".feature-item");
+const slides = document.querySelectorAll('.feature-item');
 const buttons = document.querySelectorAll('.slider-button');
 
 contactsButton.addEventListener('click', function (event) {
@@ -37,6 +37,8 @@ window.addEventListener('keydown', function (event) {
 feedbackForm.addEventListener('submit', function (event) {
   if (!userName.value || !eMail.value || !feedbackText.value) {
     event.preventDefault();
+    modal.classList.remove('modal-error');
+    modal.offsetWidth = modal.offsetWidth;
     modal.classList.add('modal-error');
   } else {
     if (isStorageSupport) {

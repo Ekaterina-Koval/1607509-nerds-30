@@ -60,6 +60,7 @@
   --basic-black-opacity-06: rgba(0, 0, 0, 0.6);
   --basic-black-opacity-03: rgba(0, 0, 0, 0.3);
   --basic-black-opacity-01: rgba(0, 0, 0, 0.1);
+  --basic-black-opacity-025: rgba(0, 0, 0, 0.25);
   --basic-white-opacity-06: rgba(255, 255, 255, 0.6);
   --basic-white-opacity-03: rgba(255, 255, 255, 0.3);
   --selection-basic-color-opacity-01: rgba(77, 77, 77, 0.1);
@@ -268,7 +269,7 @@ color: var(--basic-red);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 47px;
+  margin: 38px 0 47px;
 }
 
 .contacts-button-link {
@@ -365,13 +366,13 @@ color: var(--basic-red);
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
-  margin: 76px 14px 12px;
+  margin: 76px 14px 10px;
   padding: 0;
 }
 
 .friendship-discount {
   color: var(--footer-content);
-  line-height: 18px;
+  line-height: 22px;
   padding: 0;
   margin-top: 0;
   margin-left: 14px;
@@ -577,7 +578,6 @@ color: var(--basic-red);
 
 .feature-mission {
   width: 420px;
-  line-height: 26px;
   padding-bottom: 12px;
 }
 
@@ -594,7 +594,7 @@ color: var(--basic-red);
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-red);
-  margin-top: 26px;
+  margin-top: 28px;
 }
 
 .feature-button:hover {
@@ -680,10 +680,10 @@ color: var(--basic-red);
 
 .service-result {
   width: 255px;
-  height: 48px;
+  min-height: 48px;
 }
 
-.servise-button {
+.service-button {
   width: 160px;
   height: 50px;
   margin-top: 31px;
@@ -694,6 +694,7 @@ color: var(--basic-red);
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  line-height: 18px;
 }
 
 .service-button-red {
@@ -762,7 +763,7 @@ color: var(--basic-red);
 .about-us-principles {
   width: 646px;
   margin-top: 32px;
-  line-height: 26px;
+  line-height: 24px;
 }
 
 .about-us-services-title {
@@ -771,7 +772,7 @@ color: var(--basic-red);
   font-size: inherit;
   line-height: inherit;
   color: var(--basic-black);
-  margin: 38px 0 24px;
+  margin: 42px 0 24px;
 }
 
 .about-us-service-list {
@@ -798,7 +799,7 @@ color: var(--basic-red);
 }
 
 .assurances {
-  padding: 39px 0 72px;
+  padding: 39px 0 76px;
 }
 
 .assurances-table {
@@ -814,8 +815,8 @@ color: var(--basic-red);
 }
 
 .assurances-item td {
-  padding-top: 12px;
-  line-height: 20px;
+  padding-top: 14px;
+  line-height: 18px;
 }
 
 .assurances-legend {
@@ -1078,22 +1079,18 @@ padding: 0;
   opacity: 0.4;
 }
 
-
 .input-switch + label {
   cursor: pointer;
 }
 
-.input-switch:not(:disabled):hover + label::before {
+.input-switch:not(:disabled):hover + label::before,
+.input-switch:not(:disabled):focus + label::before,
+.input-switch:not(:disabled):focus + label::after {
   opacity: 1;
 }
 
 .input-switch:checked:hover + label::before,
 .input-switch:checked:hover + label::after {
-  opacity: 1;
-}
-
-.input-switch:focus + label::before,
-.input-switch:focus + label::after {
   opacity: 1;
 }
 
@@ -1175,7 +1172,7 @@ padding: 0;
 }
 
 .sorting-item-type:active,
-.activ-type {
+.active-type {
   opacity: 1;
 }
 
@@ -1188,7 +1185,8 @@ padding: 0;
   opacity: 0.2;
 }
 
-.sort-direction:hover .sort-direction-path {
+.sort-direction:hover .sort-direction-path,
+.active-direction {
   fill: var(--icon-basic-color);
   opacity: 1;
 }
@@ -1248,7 +1246,7 @@ padding: 0;
 .template-item:hover .template-item-image,
 .template-item:focus-within .template-item-image {
   border: none;
-  filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25))
+  filter: drop-shadow(0px 6px 15px var(--basic-black-opacity-025));
 }
 
 .template-item:hover::before,
@@ -1305,6 +1303,7 @@ padding: 0;
 
 .template-item-text {
   margin: 12px 0 32px;
+  line-height: 18px;
 }
 
 .template-item-button {
@@ -1318,6 +1317,7 @@ padding: 0;
   justify-content: center;
   align-items: center;
   font-weight: 500;
+  line-height: 18px;
   color: var(--basic-white);
   text-transform: uppercase;
   text-decoration: none;
