@@ -10,11 +10,22 @@ const feedbackText = modal.querySelector('[name=feedback-text]');
 const slides = document.querySelectorAll('.feature-item');
 const buttons = document.querySelectorAll('.slider-button');
 
+let isStorageSupport = true;
+let storageName = '';
+let storageEMail = '';
+
+try {
+  storageName = localStorage.getItem('username');
+  storageEMail = localStorage.getItem('email');
+} catch (err) {
+  isStorageSupport = false;
+}
+
 contactsButton.addEventListener('click', function (event) {
   event.preventDefault();
   modal.classList.remove('visually-hidden');
   modal.classList.add('modal-open');
-  fieldName.focus();
+  userName.focus();
 });
 
 close.addEventListener('click', function (event) {
@@ -42,13 +53,10 @@ feedbackForm.addEventListener('submit', function (event) {
     modal.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem('username', 'userName.value');
+      localStorage.setItem('username', userName.value);
+      localStorage.setItem('email', eMail.value);
     }
   }
-
-  localStorage.setItem('username', 'userName.value');
-  localStorage.setItem('email', 'eMail.value');
-
 });
 
 for (let i = 0; i < slides.length; i++) {
